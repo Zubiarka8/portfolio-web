@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Arkaitz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><i class="fas fa-laptop-code"></i> Arkaitz Zubizarreta</div>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="#technologies">Tecnologías</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#education">Formación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hola, soy <span>Arkaitz</span></h1>
+                    <p>Desarrollador apasionado por la tecnología. Creo mis propios proyectos para ganar experiencia y convertirme en un experto en desarrollo de software.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">Ver proyectos</a>
+                        <a href="#about" class="btn btn-outline">Sobre mí</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-img">
+                        <i class="fas fa-user-gear fa-5x" style="color: white;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre mí</h2>
+                <p>Conoce más sobre mi trayectoria y mi pasión por la tecnología</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Desarrollador y Friki Tecnológico</h3>
+                    <p>Soy Arkaitz, un apasionado de la tecnología que ha encontrado en el desarrollo de software mi verdadero llamado. Actualmente estoy enfocado en crear proyectos personales para desarrollar mis habilidades.</p>
+                    <p>Me considero un friki tecnológico: disfruto explorando nuevas herramientas, resolviendo problemas complejos y aprendiendo constantemente. Mi objetivo es convertirme en un desarrollador full-stack capaz de crear soluciones innovadoras.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-content">
+                                <h4>Ubicación</h4>
+                                <p>País Vasco, España</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <p>zubiarka8@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div class="info-content">
+                                <h4>Formación</h4>
+                                <p>Desarrollo Multiplataforma</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="info-content">
+                                <h4>Intereses</h4>
+                                <p>Tecnología, Gaming, Open Source</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <i class="fas fa-headset fa-5x" style="color: var(--primary); opacity: 0.7;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section - NUEVO DISEÑO -->
+    <section id="technologies">
+        <div class="container">
+            <div class="section-title floating">
+                <h2>Tecnologías</h2>
+                <p>Herramientas y tecnologías que aplico en mis proyectos</p>
+            </div>
+            <div class="tech-container">
+                <div class="tech-grid">
+                    <!-- Frontend -->
+                    <div class="tech-category">
+                        <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                        <ul class="tech-list">
+                            <li class="tech-item html">
+                                <div class="tech-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <span class="tech-name">HTML</span>
+                            </li>
+                            <li class="tech-item css">
+                                <div class="tech-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <span class="tech-name">CSS</span>
+                            </li>
+                            <li class="tech-item js">
+                                <div class="tech-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <span class="tech-name">JavaScript</span>
+                            </li>
+                            <li class="tech-item bootstrap">
+                                <div class="tech-icon">
+                                    <i class="fab fa-bootstrap"></i>
+                                </div>
+                                <span class="tech-name">Bootstrap</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="tech-category">
+                        <h3><i class="fas fa-server"></i> Backend</h3>
+                        <ul class="tech-list">
+                            <li class="tech-item python">
+                                <div class="tech-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <span class="tech-name">Python</span>
+                            </li>
+                            <li class="tech-item django">
+                                <div class="tech-icon">
+                                    <i class="fab fa-django"></i>
+                                </div>
+                                <span class="tech-name">Django</span>
+                            </li>
+                            <li class="tech-item sql">
+                                <div class="tech-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <span class="tech-name">SQL</span>
+                            </li>
+                            <li class="tech-item java">
+                                <div class="tech-icon">
+                                    <i class="fab fa-java"></i>
+                                </div>
+                                <span class="tech-name">Java</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Herramientas -->
+                    <div class="tech-category">
+                        <h3><i class="fas fa-tools"></i> Herramientas</h3>
+                        <ul class="tech-list">
+                            <li class="tech-item git">
+                                <div class="tech-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <span class="tech-name">Git</span>
+                            </li>
+                            <li class="tech-item github">
+                                <div class="tech-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="tech-name">GitHub</span>
+                            </li>
+                            <li class="tech-item docker">
+                                <div class="tech-icon">
+                                    <i class="fab fa-docker"></i>
+                                </div>
+                                <span class="tech-name">Docker</span>
+                            </li>
+                            <li class="tech-item terminal">
+                                <div class="tech-icon">
+                                    <i class="fas fa-terminal"></i>
+                                </div>
+                                <span class="tech-name">Terminal</span>
+                            </li>
+                            <li class="tech-item trello">
+                                <div class="tech-icon">
+                                    <i class="fab fa-trello"></i>
+                                </div>
+                                <span class="tech-name">Trello</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Proyectos</h2>
+                <p>Algunos de mis trabajos más destacados</p>
+            </div>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Portafolio Personal</h3>
+                        <p>Sitio web personal para mostrar mis habilidades y proyectos. Totalmente responsive y con diseño moderno, desarrollado con las últimas tecnologías frontend.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <span class="project-status completed">Finalizado</span>
+                        <div class="project-buttons">
+                            <a href="#" class="project-btn demo-btn">
+                                <i class="fas fa-eye"></i> Ver Demo
+                            </a>
+                            <a href="#" class="project-btn repo-btn">
+                                <i class="fab fa-github"></i> Repositorio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tienda Online con Django</h3>
+                        <p>Plataforma de e-commerce con sistema de carrito de compras, autenticación de usuarios, panel de administración y pasarela de pagos.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <span class="project-status in-progress">En progreso</span>
+                        <div class="project-buttons">
+                            <a href="#" class="project-btn demo-btn">
+                                <i class="fas fa-eye"></i> Ver Demo
+                            </a>
+                            <a href="#" class="project-btn repo-btn">
+                                <i class="fab fa-github"></i> Repositorio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-title">
+                <h2>Formación</h2>
+                <p>Mi trayectoria educativa y formación profesional</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-meta">
+                            <span class="education-status">Cursando</span>
+                        </div>
+                        <h3>Desarrollo de Aplicaciones Multiplataforma</h3>
+                        <p>Grado Superior. Formación avanzada en desarrollo de aplicaciones para múltiples plataformas, incluyendo web, móvil y escritorio.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-meta">
+                            <span class="education-status">Completado</span>
+                        </div>
+                        <h3>Sistemas Microinformáticos y Redes</h3>
+                        <p>Grado Medio. Especialización en instalación, configuración y mantenimiento de sistemas microinformáticos y redes locales.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="education-meta">
+                            <span class="education-status">Completado</span>
+                        </div>
+                        <h3>Educación Secundaria Obligatoria</h3>
+                        <p>Formación Básica. Educación fundamental con enfoque en ciencias tecnológicas y matemáticas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Arkaitz Zubizarreta</div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p class="copyright">© <span id="currentYear"></span> Portafolio de Arkaitz Zubizarreta. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"> </script>
+</body>
+</html>
