@@ -2,20 +2,25 @@
 
 // Inicializar AOS cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar AOS
-    AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100
-    });
+    // Inicializar AOS con configuración optimizada
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+            easing: 'ease-out-cubic'
+        });
+    }
 
-    // Efecto Matrix
-    initMatrixEffect();
+    // Efecto Matrix (solo en desktop)
+    if (window.innerWidth > 768) {
+        initMatrixEffect();
+    }
 
     // Smooth scrolling para los enlaces del menú
     initSmoothScrolling();
 
-    // Efectos de glitch y neon
+    // Efectos de glitch y neon (con throttling)
     initGlitchEffects();
     initNeonEffects();
 });
@@ -84,28 +89,38 @@ function initSmoothScrolling() {
     });
 }
 
-// Función para inicializar efectos de glitch
+// Función para inicializar efectos de glitch (optimizada)
 function initGlitchEffects() {
+    let lastGlitch = 0;
     setInterval(() => {
-        const glitchElements = document.querySelectorAll('.glitch');
-        glitchElements.forEach(element => {
-            if (Math.random() > 0.95) {
-                element.style.animation = 'none';
-                setTimeout(() => {
-                    element.style.animation = '';
-                }, 100);
-            }
-        });
+        const now = Date.now();
+        if (now - lastGlitch > 2000) { // Throttling de 2 segundos
+            const glitchElements = document.querySelectorAll('.glitch');
+            glitchElements.forEach(element => {
+                if (Math.random() > 0.95) {
+                    element.style.animation = 'none';
+                    setTimeout(() => {
+                        element.style.animation = '';
+                    }, 100);
+                    lastGlitch = now;
+                }
+            });
+        }
     }, 1000);
 }
 
-// Función para inicializar efectos neon
+// Función para inicializar efectos neon (optimizada)
 function initNeonEffects() {
+    let lastNeon = 0;
     setInterval(() => {
-        const neonElements = document.querySelectorAll('.neon-blue, .neon-pink, .neon-green');
-        neonElements.forEach(element => {
-            element.style.textShadow = `0 0 ${Math.random() * 20 + 10}px currentColor`;
-        });
+        const now = Date.now();
+        if (now - lastNeon > 3000) { // Throttling de 3 segundos
+            const neonElements = document.querySelectorAll('.neon-blue, .neon-pink, .neon-green');
+            neonElements.forEach(element => {
+                element.style.textShadow = `0 0 ${Math.random() * 15 + 8}px currentColor`;
+            });
+            lastNeon = now;
+        }
     }, 2000);
 }
 
