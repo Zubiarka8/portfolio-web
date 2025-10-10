@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Web - Arkaitz Zubizarreta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cyber-bg text-white cyber-grid">
+    <!-- Matrix Background -->
+    <div class="matrix-bg">
+        <canvas id="matrix-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md cyber-border">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold neon-blue glitch" data-text="Portfolio Web">
+                    <i class="fas fa-terminal mr-2"></i>Portfolio Web
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="hover:neon-blue transition-colors terminal-text">[INICIO]</a>
+                    <a href="#sobre-mi" class="hover:neon-blue transition-colors terminal-text">[SOBRE_MI]</a>
+                    <a href="#tecnologias" class="hover:neon-blue transition-colors terminal-text">[TECNOLOGIAS]</a>
+                    <a href="#proyectos" class="hover:neon-blue transition-colors terminal-text">[PROYECTOS]</a>
+                    <a href="#formacion" class="hover:neon-blue transition-colors terminal-text">[FORMACION]</a>
+                </div>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto cyber-card rounded-full flex items-center justify-center mb-6 pulse-neon">
+                        <i class="fas fa-robot text-4xl neon-blue"></i>
+                    </div>
+                </div>
+                <h1 class="text-6xl font-bold mb-6 glitch" data-text="ARKAITZ ZUBIZARRETA">
+                    <span class="neon-blue">ARKAITZ ZUBIZARRETA</span>
+                </h1>
+                <p class="text-xl mb-8 max-w-3xl mx-auto text-gray-300 terminal-text">
+                    > DESARROLLADOR DE APLICACIONES MULTIPLATAFORMA (DAM)<br>
+                    > ESPECIALIZADO EN TECNOLOGÍAS FUTURISTAS<br>
+                    > CREANDO EL FUTURO DEL DESARROLLO SOFTWARE
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#proyectos" class="cyber-button px-10 py-4 font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
+                        <i class="fas fa-rocket mr-2"></i>[VER_PROYECTOS]
+                    </a>
+                    <a href="#sobre-mi" class="cyber-border text-neon-blue px-10 py-4 font-bold text-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-105">
+                        <i class="fas fa-user mr-2"></i>[CONOCEME]
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="animate-bounce">
+                <i class="fas fa-chevron-down text-2xl neon-blue"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="py-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 neon-pink glitch" data-text="SOBRE_MI">
+                    SOBRE_MI
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-pink-500 mx-auto"></div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-right">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-cyan-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center hologram">
+                                <i class="fas fa-brain text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 neon-blue">DESARROLLADOR CYBER</h3>
+                            <p class="text-gray-300 leading-relaxed terminal-text">
+                                Como estudiante de DAM, me especializo en tecnologías 
+                                emergentes y desarrollo de aplicaciones que empujan 
+                                los límites de la innovación digital.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-up">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center hologram">
+                                <i class="fas fa-code text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 neon-pink">INNOVACIÓN TECH</h3>
+                            <p class="text-gray-300 leading-relaxed terminal-text">
+                                Siempre explorando nuevas tecnologías y metodologías 
+                                de desarrollo. Mi objetivo es crear soluciones que 
+                                definan el futuro del software.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-left">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-cyan-500 rounded-full mx-auto mb-6 flex items-center justify-center hologram">
+                                <i class="fas fa-rocket text-white text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 neon-green">FUTURO DIGITAL</h3>
+                            <p class="text-gray-300 leading-relaxed terminal-text">
+                                En constante evolución y aprendizaje. Preparado para 
+                                enfrentar los desafíos tecnológicos del mañana y 
+                                crear experiencias digitales revolucionarias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologías -->
+    <section id="tecnologias" class="py-20 bg-black bg-opacity-50 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 neon-green glitch" data-text="TECNOLOGIAS">
+                    TECNOLOGIAS
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto"></div>
+            </div>
+            
+            <!-- Tecnologías Unificadas -->
+            <div class="max-w-6xl mx-auto tech-sway-animation">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+                    <!-- Lenguajes de Programación -->
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fab fa-html5 text-5xl text-orange-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">HTML5</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fab fa-css3-alt text-5xl text-blue-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">CSS3</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="300">
+                        <i class="fab fa-js-square text-5xl text-yellow-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">JAVASCRIPT</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fab fa-python text-5xl text-green-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">PYTHON</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="500">
+                        <i class="fab fa-java text-5xl text-red-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">JAVA</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="600">
+                        <i class="fas fa-code text-5xl text-purple-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">C#</h3>
+                    </div>
+                    
+                    <!-- Herramientas y DevTools -->
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="700">
+                        <i class="fab fa-microsoft text-5xl text-blue-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">VSCODE</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="800">
+                        <i class="fas fa-code text-5xl text-purple-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">CURSOR</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="900">
+                        <i class="fab fa-java text-5xl text-orange-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">ECLIPSE</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="1000">
+                        <i class="fas fa-brain text-5xl text-red-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">INTELLIJ</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="1100">
+                        <i class="fab fa-git-alt text-5xl text-orange-500 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">GIT</h3>
+                    </div>
+                    <div class="text-center cyber-card p-6 rounded-lg hover:bg-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-110" data-aos="zoom-in" data-aos-delay="1200">
+                        <i class="fab fa-github text-5xl text-gray-300 mb-4 tech-icon spinning-icon"></i>
+                        <h3 class="font-bold terminal-text">GITHUB</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-20 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 neon-pink glitch" data-text="PROYECTOS">
+                    PROYECTOS
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 mx-auto mb-8"></div>
+                <div class="cyber-border bg-black bg-opacity-50 inline-block px-8 py-3 rounded-lg">
+                    <span class="neon-green font-bold terminal-text">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        PROYECTOS_FINALIZADOS: <span id="proyectos-count">1</span>
+                    </span>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Proyecto 1 - Finalizado -->
+                <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-right">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="bg-green-500 text-black px-4 py-2 rounded-lg text-sm font-bold terminal-text">
+                            <i class="fas fa-check mr-2"></i>FINALIZADO
+                        </span>
+                        <div class="flex space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 neon-blue glitch" data-text="AI_ASSISTANT">
+                        AI_ASSISTANT
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed terminal-text">
+                        > ASISTENTE VIRTUAL CON INTELIGENCIA ARTIFICIAL<br>
+                        > PROCESAMIENTO DE LENGUAJE NATURAL<br>
+                        > INTEGRACIÓN CON MÚLTIPLES APIs<br>
+                        > INTERFAZ DE USUARIO FUTURISTA
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-300 mb-3 terminal-text">STACK_TECNOLOGICO:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-3 py-1 rounded text-sm font-bold">REACT</span>
+                            <span class="bg-gradient-to-r from-green-500 to-teal-500 text-black px-3 py-1 rounded text-sm font-bold">NODE.JS</span>
+                            <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-black px-3 py-1 rounded text-sm font-bold">OPENAI_API</span>
+                            <span class="bg-gradient-to-r from-orange-500 to-red-500 text-black px-3 py-1 rounded text-sm font-bold">WEBSOCKETS</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="cyber-button px-6 py-3 font-bold hover:shadow-lg transition-all transform hover:scale-105">
+                            <i class="fas fa-external-link-alt mr-2"></i>[DEMO]
+                        </a>
+                        <a href="#" class="cyber-border text-neon-blue px-6 py-3 font-bold hover:bg-cyan-500 hover:bg-opacity-20 transition-all transform hover:scale-105">
+                            <i class="fab fa-github mr-2"></i>[REPOSITORIO]
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 - En progreso -->
+                <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-left">
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 text-black px-4 py-2 rounded-lg text-sm font-bold terminal-text">
+                            <i class="fas fa-clock mr-2"></i>EN_PROGRESO
+                        </span>
+                        <div class="flex space-x-1">
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                            <i class="fas fa-star text-gray-400"></i>
+                            <i class="fas fa-star text-gray-400"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 neon-pink glitch" data-text="QUANTUM_SIM">
+                        QUANTUM_SIM
+                    </h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed terminal-text">
+                        > SIMULADOR DE COMPUTACIÓN CUÁNTICA<br>
+                        > ALGORITMOS CUÁNTICOS INTERACTIVOS<br>
+                        > VISUALIZACIÓN 3D DE ESTADOS CUÁNTICOS<br>
+                        > INTERFAZ HOLOGRÁFICA AVANZADA
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-bold text-gray-300 mb-3 terminal-text">STACK_TECNOLOGICO:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gradient-to-r from-orange-500 to-yellow-500 text-black px-3 py-1 rounded text-sm font-bold">THREE.JS</span>
+                            <span class="bg-gradient-to-r from-blue-500 to-purple-500 text-black px-3 py-1 rounded text-sm font-bold">WEBGL</span>
+                            <span class="bg-gradient-to-r from-green-500 to-cyan-500 text-black px-3 py-1 rounded text-sm font-bold">QUANTUM.JS</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button disabled class="bg-gray-600 text-gray-400 px-6 py-3 rounded-lg cursor-not-allowed font-bold terminal-text">
+                            <i class="fas fa-lock mr-2"></i>[DEMO_PROXIMAMENTE]
+                        </button>
+                        <a href="#" class="bg-gradient-to-r from-orange-500 to-yellow-500 text-black px-6 py-3 rounded-lg font-bold hover:shadow-lg transition-all transform hover:scale-105">
+                            <i class="fab fa-github mr-2"></i>[REPOSITORIO]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación -->
+    <section id="formacion" class="py-20 bg-black bg-opacity-50 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 neon-green glitch" data-text="FORMACION">
+                    FORMACION
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-green-500 to-cyan-500 mx-auto"></div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- DAM -->
+                    <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-right">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mr-6 hologram">
+                                <i class="fas fa-graduation-cap text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold neon-blue terminal-text">DESARROLLO_APLICACIONES_MULTIPLATAFORMA</h3>
+                                <p class="text-gray-300 terminal-text text-lg">CICLO_FORMATIVO_GRADO_SUPERIOR</p>
+                            </div>
+                        </div>
+                        <div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
+                            <p class="text-gray-300 leading-relaxed terminal-text">
+                                > FORMACIÓN INTEGRAL EN DESARROLLO SOFTWARE<br>
+                                > TECNOLOGÍAS WEB, MÓVILES Y ESCRITORIO<br>
+                                > METODOLOGÍAS ÁGILES Y DEVOPS<br>
+                                > ARQUITECTURAS DE SOFTWARE AVANZADAS<br>
+                                > BASE DE DATOS Y PROGRAMACIÓN ORIENTADA A OBJETOS
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-cyan-400 font-bold terminal-text">
+                                <i class="fas fa-calendar mr-2"></i>
+                                <span>2023 - 2025</span>
+                            </div>
+                            <div class="bg-green-500 text-black px-4 py-2 rounded-lg text-sm font-bold terminal-text">
+                                <i class="fas fa-check mr-2"></i>EN_CURSO
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SMR -->
+                    <div class="cyber-card p-8 rounded-lg scan-line" data-aos="fade-left">
+                        <div class="flex items-center mb-6">
+                            <div class="w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mr-6 hologram">
+                                <i class="fas fa-server text-white text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold neon-pink terminal-text">SISTEMAS_MICROINFORMATICOS_Y_REDES</h3>
+                                <p class="text-gray-300 terminal-text text-lg">CICLO_FORMATIVO_GRADO_MEDIO</p>
+                            </div>
+                        </div>
+                        <div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
+                            <p class="text-gray-300 leading-relaxed terminal-text">
+                                > INSTALACIÓN Y CONFIGURACIÓN DE SISTEMAS OPERATIVOS<br>
+                                > ADMINISTRACIÓN DE REDES Y SERVIDORES<br>
+                                > MANTENIMIENTO DE EQUIPOS INFORMÁTICOS<br>
+                                > SEGURIDAD INFORMÁTICA Y BACKUP<br>
+                                > VIRTUALIZACIÓN Y CLOUD COMPUTING
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-pink-400 font-bold terminal-text">
+                                <i class="fas fa-calendar mr-2"></i>
+                                <span>2021 - 2023</span>
+                            </div>
+                            <div class="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-bold terminal-text">
+                                <i class="fas fa-certificate mr-2"></i>FINALIZADO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificaciones adicionales -->
+                <div class="mt-12" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-8 neon-green text-center terminal-text">CERTIFICACIONES_ADICIONALES</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="cyber-card p-6 rounded-lg text-center">
+                            <i class="fas fa-certificate text-4xl text-yellow-500 mb-4"></i>
+                            <h4 class="font-bold neon-blue terminal-text">MICROSOFT_AZURE</h4>
+                            <p class="text-gray-300 terminal-text text-sm">CLOUD_COMPUTING</p>
+                        </div>
+                        <div class="cyber-card p-6 rounded-lg text-center">
+                            <i class="fas fa-shield-alt text-4xl text-green-500 mb-4"></i>
+                            <h4 class="font-bold neon-green terminal-text">CYBERSECURITY</h4>
+                            <p class="text-gray-300 terminal-text text-sm">SEGURIDAD_INFORMATICA</p>
+                        </div>
+                        <div class="cyber-card p-6 rounded-lg text-center">
+                            <i class="fas fa-code-branch text-4xl text-purple-500 mb-4"></i>
+                            <h4 class="font-bold neon-pink terminal-text">DEVOPS</h4>
+                            <p class="text-gray-300 terminal-text text-sm">CI/CD_PIPELINES</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gradient-to-r from-cyan-900 to-purple-900 relative z-10">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-2xl font-bold mb-4 neon-blue glitch" data-text="PORTFOLIO_WEB">
+                    <i class="fas fa-terminal mr-2"></i>PORTFOLIO_WEB
+                </div>
+                <p class="text-cyan-200 mb-6 max-w-2xl mx-auto terminal-text">
+                    > DESARROLLADO CON TECNOLOGÍAS FUTURISTAS<br>
+                    > SIEMPRE EXPLORANDO NUEVAS FRONTERAS DIGITALES<br>
+                    > CREANDO EL FUTURO DEL DESARROLLO SOFTWARE
+                </p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-cyan-300 hover:text-cyan-100 transition-colors transform hover:scale-110">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-cyan-300 hover:text-cyan-100 transition-colors transform hover:scale-110">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-cyan-300 hover:text-cyan-100 transition-colors transform hover:scale-110">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-cyan-300 hover:text-cyan-100 transition-colors transform hover:scale-110">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+                <div class="border-t border-cyan-300 pt-6">
+                    <p class="text-cyan-200 terminal-text">
+                        © 2024 ARKAITZ ZUBIZARRETA. TODOS_LOS_DERECHOS_RESERVADOS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
