@@ -74,7 +74,7 @@ const es = {
     demoNotice:
       "Proyecto de demostración. El contenido es ilustrativo y no corresponde a un trabajo real.",
     inDevelopmentNotice:
-      "Proyecto en desarrollo: todavía no hay resultado publicado y esta página describe el plan.",
+      "Proyecto en desarrollo: todavía no está terminado, así que lo descrito aquí puede cambiar.",
     context: "Contexto",
     objective: "Objetivo",
     problem: "Problema a resolver",
@@ -172,7 +172,7 @@ const en: Dictionary = {
     demoNotice:
       "Demonstration project. The content is illustrative and does not describe real work.",
     inDevelopmentNotice:
-      "Project in development: there is no published result yet and this page describes the plan.",
+      "Project in development: it is not finished yet, so what is described here may change.",
     context: "Context",
     objective: "Objective",
     problem: "Problem to solve",

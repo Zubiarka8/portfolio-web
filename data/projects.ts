@@ -75,7 +75,7 @@ export const projects: Project[] = [
       repository: "https://github.com/Zubiarka8/mini-consumes-tokens",
     },
     isDemo: false,
-    status: "released",
+    status: "in-development",
     caseStudy: {
       context: {
         es: "Proyecto de código abierto (licencia Apache-2.0) para quien programa con asistentes de IA. Funciona en local: el índice es un único archivo en tu equipo y nada sale de él.",
