@@ -8,7 +8,7 @@ import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { navItems, navOwner, routes, sectionIds, type SectionKey } from "@/data/navigation";
 import type { Dictionary } from "@/data/dictionary";
 import { siteConfig } from "@/data/site-config";
-import { locales, type Locale } from "@/lib/i18n";
+import type { Locale } from "@/lib/i18n";
 import { LOCALE_STORAGE_KEY } from "@/lib/locale-redirect";
 import { pageHref } from "@/lib/base-path";
 
@@ -63,6 +63,7 @@ function rememberLocale(locale: Locale) {
 
 export function Navbar({ locale, dict, onHome, alternateHref }: NavbarProps) {
   const active = useActiveSection(locale, onHome);
+  const otherLocale: Locale = locale === "es" ? "en" : "es";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -153,37 +154,17 @@ export function Navbar({ locale, dict, onHome, alternateHref }: NavbarProps) {
         </ul>
 
         <div className="flex items-center gap-2">
-          <div
-            role="group"
+          {/* One button: it shows the language you would switch to. */}
+          <a
+            href={pageHref(alternateHref)}
+            hrefLang={otherLocale}
+            lang={otherLocale}
             aria-label={dict.switchLanguage}
-            className="flex h-11 items-center gap-0.5 rounded-full border border-line p-1 font-mono text-xs"
+            onClick={() => rememberLocale(otherLocale)}
+            className="flex h-11 min-w-11 items-center justify-center rounded-full border border-line px-3 font-mono text-xs text-fg-secondary transition-colors duration-200 hover:border-accent hover:text-fg"
           >
-            {locales.map((option) => {
-              const active = option === locale;
-              const className = `flex h-full min-w-9 items-center justify-center rounded-full px-2.5 transition-colors duration-200 ${
-                active ? "bg-surface-elevated text-fg" : "text-fg-muted hover:text-fg"
-              }`;
-              if (active) {
-                return (
-                  <span key={option} aria-current="true" lang={option} className={className}>
-                    {option.toUpperCase()}
-                  </span>
-                );
-              }
-              return (
-                <a
-                  key={option}
-                  href={pageHref(alternateHref)}
-                  hrefLang={option}
-                  lang={option}
-                  onClick={() => rememberLocale(option)}
-                  className={className}
-                >
-                  {option.toUpperCase()}
-                </a>
-              );
-            })}
-          </div>
+            {dict.languageShort}
+          </a>
           <ThemeToggle label={dict.theme} />
           <button
             ref={toggleRef}
