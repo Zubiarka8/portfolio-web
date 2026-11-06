@@ -133,8 +133,8 @@ export const projects: Project[] = [
     name: "zirrara-glass",
     category: { es: "Biblioteca de interfaz (UI)", en: "UI library" },
     summary: {
-      es: "Una UI para crear interfaces en páginas web, pensada para ampliarse después a Android, iOS y escritorio.",
-      en: "A UI to build interfaces for web pages, designed to grow later into Android, iOS and desktop.",
+      es: "Una UI para crear interfaces, pensada para usarse en webs.",
+      en: "A UI to build interfaces, designed to be used on the web.",
     },
     technologies: [],
     tools: ["GitHub"],
@@ -142,8 +142,8 @@ export const projects: Project[] = [
     cover: {
       src: "/images/projects/zirrara-glass.svg",
       alt: {
-        es: "Ilustración de componentes de interfaz translúcidos: botones, un campo de búsqueda, interruptores, un control deslizante y una tarjeta, con etiquetas web, android, iOS y escritorio.",
-        en: "Illustration of translucent interface components: buttons, a search field, toggles, a slider and a card, with web, android, iOS and desktop labels.",
+        es: "Ilustración de componentes de interfaz translúcidos: botones, un campo de búsqueda, interruptores, un control deslizante y una tarjeta.",
+        en: "Illustration of translucent interface components: buttons, a search field, toggles, a slider and a card.",
       },
       ...coverSize,
     },
@@ -159,8 +159,8 @@ export const projects: Project[] = [
         en: "A personal project that has just started. The repository is public but has no code yet: this page describes the idea, not a result.",
       },
       objective: {
-        es: "Ofrecer una UI con la que crear interfaces para páginas web de forma coherente, sin rehacer cada componente en cada proyecto.",
-        en: "Provide a UI for building web page interfaces consistently, without rebuilding every component in each project.",
+        es: "Ofrecer una UI con la que crear interfaces de forma coherente, pensada para usarse en webs, sin rehacer cada componente en cada proyecto.",
+        en: "Provide a UI for building interfaces consistently, designed to be used on the web, without rebuilding every component in each project.",
       },
       problem: {
         es: "Cada web nueva suele empezar recreando los mismos botones, campos y tarjetas, y mantener su aspecto igual entre proyectos cuesta tiempo.",
@@ -168,17 +168,10 @@ export const projects: Project[] = [
       },
       process: [
         {
-          title: { es: "Primero la web", en: "Web first" },
+          title: { es: "Pensada para la web", en: "Made for the web" },
           body: {
-            es: "El punto de partida son los componentes para interfaces de páginas web.",
-            en: "The starting point is components for web page interfaces.",
-          },
-        },
-        {
-          title: { es: "Después, otras plataformas", en: "Other platforms later" },
-          body: {
-            es: "Si el diseño lo permite, la idea es llevarlo también a Android, iOS y escritorio. Es una posibilidad, no un compromiso.",
-            en: "If the design allows it, the idea is to bring it to Android, iOS and desktop as well. It is a possibility, not a commitment.",
+            es: "El punto de partida son los componentes para interfaces de webs. No hay planes cerrados más allá de eso.",
+            en: "The starting point is components for web interfaces. There are no firm plans beyond that.",
           },
         },
       ],
