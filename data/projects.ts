@@ -56,8 +56,8 @@ export const projects: Project[] = [
     name: "mini-consumes-tokens",
     category: { es: "Herramienta para desarrolladores", en: "Developer tool" },
     summary: {
-      es: "Mapa local de tu código que permite a un asistente de IA saber dónde se define algo y qué se rompería al cambiarlo, sin releer los archivos.",
-      en: "A local map of your code that lets an AI assistant find where something is defined and what a change would break, without re-reading files.",
+      es: "Un mapa local de tu código para asistentes de IA: responde dónde se define algo y qué se rompería al cambiarlo, sin releer los archivos.",
+      en: "A local map of your code for AI assistants: it answers where something is defined and what a change would break, without re-reading files.",
     },
     technologies: ["Rust", "tree-sitter", "SQLite", "MCP"],
     tools: ["Cargo", "GitHub Actions", "GitHub Pages"],
@@ -86,8 +86,8 @@ export const projects: Project[] = [
         en: "Let an assistant answer “where is this defined”, “what uses it” and “what would break if I change it” with one precise query, instead of opening and reading whole files.",
       },
       problem: {
-        es: "Para contestar preguntas sencillas sobre el código, un asistente suele abrir archivos o buscar en todo el proyecto. Es lento y gasta buena parte de su atención (tokens) que podría dedicar a resolver el problema real.",
-        en: "To answer simple questions about code, an assistant usually opens files or searches the whole project. It is slow and spends much of its attention (tokens) that could go toward the actual problem.",
+        es: "Para contestar preguntas sencillas sobre el código, un asistente suele abrir archivos o buscar en todo el proyecto. Es lento y consume tokens (el texto que puede leer) que necesitaría para resolver el problema real.",
+        en: "To answer simple questions about code, an assistant usually opens files or searches the whole project. It is slow and uses up tokens (the text it can read) that it needs for the actual problem.",
       },
       process: [
         {
@@ -113,8 +113,8 @@ export const projects: Project[] = [
         },
       ],
       solution: {
-        es: "Un índice que entiende 17 lenguajes a la vez, 23 herramientas MCP (consulta de símbolos, búsqueda, relaciones, análisis de impacto y paquetes de contexto) y un modo de descubrimiento progresivo que evita cargar todos los esquemas de golpe. En las mediciones del proyecto, el asistente lee entre un 70 y un 98 % menos de texto.",
-        en: "An index that understands 17 languages at once, 23 MCP tools (symbol lookup, search, relations, impact analysis and context packs) and progressive discovery that avoids loading every schema up front. In the project's own measurements, the assistant reads 70 to 98% less text.",
+        es: "Un índice que entiende 17 lenguajes a la vez y ofrece 23 herramientas MCP: consulta de símbolos, búsqueda, relaciones, análisis de impacto y paquetes de contexto. Un modo de descubrimiento progresivo evita cargar todos los esquemas de golpe. En las mediciones del proyecto, el asistente lee entre un 70 y un 98 % menos de texto.",
+        en: "An index that understands 17 languages at once and offers 23 MCP tools: symbol lookup, search, relations, impact analysis and context packs. Progressive discovery avoids loading every schema up front. In the project's own measurements, the assistant reads 70 to 98% less text.",
       },
       learnings: {
         es: [
@@ -133,8 +133,8 @@ export const projects: Project[] = [
     name: "zirrara-glass",
     category: { es: "Biblioteca de interfaz (UI)", en: "UI library" },
     summary: {
-      es: "Una UI para crear interfaces, pensada para usarse en webs.",
-      en: "A UI to build interfaces, designed to be used on the web.",
+      es: "Una UI para crear interfaces coherentes en webs. Acaba de empezar y el repositorio aún no tiene código.",
+      en: "A UI for building consistent web interfaces. It has just started and the repository has no code yet.",
     },
     technologies: [],
     tools: ["GitHub"],

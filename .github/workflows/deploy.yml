@@ -39,6 +39,9 @@ jobs:
           echo "NEXT_PUBLIC_SITE_URL=${SITE_URL:-https://${OWNER,,}.github.io${BASE_PATH}}" >> "$GITHUB_ENV"
         env:
           SITE_URL: ${{ vars.SITE_URL }}
+      - name: Publish build id
+        # GitHub Pages caches pages for 10 minutes; open pages poll this file.
+        run: echo "{\"build\":\"${GITHUB_SHA}\"}" > public/version.json
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { fontVariables } from "@/lib/fonts";
 import { htmlLang, type Locale } from "@/lib/i18n";
 import { localeRedirectScript } from "@/lib/locale-redirect";
+import { UpdateChecker } from "./UpdateChecker";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { MotionProvider } from "./MotionProvider";
 
@@ -40,6 +41,7 @@ export function RootDocument({ locale, children }: RootDocumentProps) {
       </head>
       <body className="min-h-screen antialiased">
         <MotionProvider>
+          <UpdateChecker />
           <ScrollProgress />
           {children}
         </MotionProvider>

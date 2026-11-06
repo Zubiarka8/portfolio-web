@@ -9,6 +9,9 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",
+  // Identifies this build so open pages can detect a newer deploy
+  // (see components/layout/UpdateChecker.tsx). "dev" disables the check.
+  env: { NEXT_PUBLIC_BUILD_ID: process.env.GITHUB_SHA ?? "dev" },
   // /en/ -> en/index.html: works on any static host without extension rewrites.
   trailingSlash: true,
   basePath,

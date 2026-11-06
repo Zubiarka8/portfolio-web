@@ -23,7 +23,7 @@ const es = {
   projects: {
     title: "Proyectos destacados",
     intro:
-      "Un proyecto real de código abierto: del problema a la solución, con el código a la vista.",
+      "Proyectos propios, ambos en desarrollo. Cada uno explica el problema que resuelve y enlaza a su repositorio.",
     demoNotice:
       "Los seis casos con la etiqueta Demo son ficticios y se sustituirán por trabajos reales.",
     website: "Web oficial",
@@ -122,7 +122,7 @@ const en: Dictionary = {
   projects: {
     title: "Featured projects",
     intro:
-      "A real open-source project: from the problem to the solution, with the code in plain sight.",
+      "Personal projects, both in development. Each one explains the problem it solves and links to its repository.",
     demoNotice: "The six cases tagged Demo are fictional and will be replaced with real work.",
     website: "Website",
     repository: "Repo",
