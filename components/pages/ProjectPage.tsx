@@ -16,6 +16,7 @@ import { routes } from "@/data/navigation";
 import { getAdjacentProjects, projects, type Project } from "@/data/projects";
 import { isConfiguredUrl } from "@/data/site-config";
 import type { Locale } from "@/lib/i18n";
+import { withBasePath } from "@/lib/base-path";
 
 interface ProjectPageProps {
   project: Project;
@@ -128,7 +129,7 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
 
         <figure className="crop-marks relative mt-10 aspect-video overflow-hidden rounded-sm border border-line-soft bg-surface">
           <Image
-            src={project.cover.src}
+            src={withBasePath(project.cover.src)}
             alt={project.cover.alt[locale]}
             fill
             priority
@@ -190,7 +191,7 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
                 <figure className="flex flex-col gap-2">
                   <div className="relative aspect-video overflow-hidden rounded-sm border border-line-soft bg-surface">
                     <Image
-                      src={project.cover.src}
+                      src={withBasePath(project.cover.src)}
                       alt={project.cover.alt[locale]}
                       fill
                       unoptimized
@@ -208,7 +209,7 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
                   <figure className="flex flex-col gap-2">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-line-soft bg-surface">
                       <Image
-                        src={project.cover.src}
+                        src={withBasePath(project.cover.src)}
                         alt=""
                         fill
                         unoptimized

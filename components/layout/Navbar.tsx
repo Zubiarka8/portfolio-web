@@ -9,6 +9,8 @@ import { navItems, navOwner, routes, sectionIds, type SectionKey } from "@/data/
 import type { Dictionary } from "@/data/dictionary";
 import { siteConfig } from "@/data/site-config";
 import { locales, type Locale } from "@/lib/i18n";
+import { LOCALE_STORAGE_KEY } from "@/lib/locale-redirect";
+import { pageHref } from "@/lib/base-path";
 
 interface NavbarProps {
   locale: Locale;
@@ -53,9 +55,9 @@ function useActiveSection(locale: Locale, enabled: boolean): SectionKey | null {
 /** Saves the visitor's choice so the root URL stops auto-redirecting by browser language. */
 function rememberLocale(locale: Locale) {
   try {
-    document.cookie = `locale=${locale}; path=/; max-age=31536000; samesite=lax`;
+    localStorage.setItem(LOCALE_STORAGE_KEY, locale);
   } catch {
-    // Cookies blocked: the switch still navigates, it just is not remembered.
+    // Storage blocked: the switch still navigates, it just is not remembered.
   }
 }
 
@@ -171,7 +173,7 @@ export function Navbar({ locale, dict, onHome, alternateHref }: NavbarProps) {
               return (
                 <a
                   key={option}
-                  href={alternateHref}
+                  href={pageHref(alternateHref)}
                   hrefLang={option}
                   lang={option}
                   onClick={() => rememberLocale(option)}

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { fontVariables } from "@/lib/fonts";
 import { htmlLang, type Locale } from "@/lib/i18n";
+import { localeRedirectScript } from "@/lib/locale-redirect";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { MotionProvider } from "./MotionProvider";
 
@@ -21,6 +22,14 @@ export function RootDocument({ locale, children }: RootDocumentProps) {
         {/* The site is already dark: tells Dark Reader to stay off so it does
             not rewrite inline SVG attributes and break hydration. */}
         <meta name="darkreader-lock" />
+        {/* Static hosting has no server: the language redirect runs in the browser. */}
+        {locale === "es" ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: localeRedirectScript(process.env.NEXT_PUBLIC_BASE_PATH ?? ""),
+            }}
+          />
+        ) : null}
         {/* Applies a saved light theme before first paint to avoid a flash. */}
         <script
           dangerouslySetInnerHTML={{

@@ -22,20 +22,19 @@ Open <http://localhost:3000>.
 | Command | What it does |
 | --- | --- |
 | `npm run dev` | Development server |
-| `npm run build` | Production build (also type-checks) |
-| `npm run start` | Serves the production build |
+| `npm run build` | Static export to `out/` (also type-checks) |
 | `npm run lint` | ESLint |
 | `npx tsc --noEmit` | Type check only (run `npx next typegen` first on a fresh clone) |
 
 ## Stack
 
-Next.js 16 (App Router, Cache Components), React 19, TypeScript (strict), Tailwind CSS 4, Motion, Lucide React. Fonts are self-hosted at build time with `next/font`: **Doto** (dot-matrix headlines), **Space Mono** (labels, navigation) and **Space Grotesk** (body text).
+Next.js 16 (App Router, static export), React 19, TypeScript (strict), Tailwind CSS 4, Motion, Lucide React. Fonts are self-hosted at build time with `next/font`: **Doto** (dot-matrix headlines), **Space Mono** (labels, navigation) and **Space Grotesk** (body text).
 
 ## Structure
 
 ```text
 app/
-  (es)/                     Spanish root layout: /, /proyectos/[slug]
+  (es)/                     Spanish root layout: /, /proyectos/[slug], /es, /es/proyectos/[slug]
   (en)/                     English root layout: /en, /en/projects/[slug]
   global-not-found.tsx      404 for unmatched URLs
   sitemap.ts, robots.ts, icon.svg
@@ -96,3 +95,18 @@ Empty URLs are never rendered as links. They appear as disabled buttons that say
 
 - Unknown project slugs render the localized "not found" page with `noindex`. Because routes are partially prerendered, the HTTP status for those URLs is 200; unmatched paths outside the project routes return a real 404.
 - Animations respect `prefers-reduced-motion` (Motion's `MotionConfig` plus CSS media queries).
+
+## Deployment (GitHub Pages)
+
+The site is a static export (`output: "export"`), so it needs no server. There is no `proxy.ts`: the first-visit language choice runs in the browser (`lib/locale-redirect.ts`), and `/es` is a real page whose canonical URL is `/`.
+
+1. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**. GitHub Pages on a private repository needs a paid plan; a public repository works on the free plan.
+2. Push to `main` (or `nextjs`). `.github/workflows/deploy.yml` builds and publishes `out/`.
+3. The workflow derives the base path (`/<repository>`, or empty for `<owner>.github.io`) and the site URL. To use a custom domain, define the repository variable `SITE_URL`.
+4. If a branch other than `main` deploys, allow it under **Settings → Environments → github-pages → Deployment branches**.
+
+Build locally for a project site:
+
+```sh
+NEXT_PUBLIC_BASE_PATH=/portfolio-web NEXT_PUBLIC_SITE_URL=https://<user>.github.io/portfolio-web npm run build
+```

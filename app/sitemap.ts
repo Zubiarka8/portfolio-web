@@ -3,6 +3,8 @@ import { routes } from "@/data/navigation";
 import { projects } from "@/data/projects";
 import { absoluteUrl } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const home: MetadataRoute.Sitemap[number] = {
     url: absoluteUrl(routes.home("es")),

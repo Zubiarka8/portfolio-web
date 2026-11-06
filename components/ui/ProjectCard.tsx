@@ -7,6 +7,7 @@ import { isConfiguredUrl } from "@/data/site-config";
 import type { Dictionary } from "@/data/dictionary";
 import type { Locale } from "@/lib/i18n";
 import { ButtonLink } from "./Button";
+import { withBasePath } from "@/lib/base-path";
 
 interface ProjectCardProps {
   project: Project;
@@ -36,7 +37,7 @@ export function ProjectCard({ project, index, locale, dict }: ProjectCardProps) 
         className="project-media relative block aspect-video overflow-hidden border-b border-line-soft bg-background"
       >
         <Image
-          src={project.cover.src}
+          src={withBasePath(project.cover.src)}
           alt=""
           fill
           unoptimized

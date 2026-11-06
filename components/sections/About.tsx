@@ -6,6 +6,7 @@ import { sectionIds } from "@/data/navigation";
 import { siteConfig } from "@/data/site-config";
 import type { Dictionary } from "@/data/dictionary";
 import type { Locale } from "@/lib/i18n";
+import { withBasePath } from "@/lib/base-path";
 
 interface AboutProps {
   locale: Locale;
@@ -26,7 +27,7 @@ export function About({ locale, dict }: AboutProps) {
           <figure className="crop-marks relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-sm border border-line-soft bg-surface lg:max-w-none">
             {hasPhoto ? (
               <Image
-                src={about.photo.src}
+                src={withBasePath(about.photo.src)}
                 alt={about.photo.alt[locale]}
                 fill
                 sizes="(min-width: 1024px) 40vw, 90vw"

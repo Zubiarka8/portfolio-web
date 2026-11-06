@@ -14,8 +14,16 @@ interface PageMetadataInput {
   absoluteTitle?: boolean;
 }
 
+/** Pages are exported as <route>/index.html, so every route ends with a slash. */
+function withTrailingSlash(path: string): string {
+  return path === "/" || path.endsWith("/") ? path : `${path}/`;
+}
+
+/** Joins a route to the site URL, keeping the base path of a project site. */
 export function absoluteUrl(path: string): string {
-  return new URL(path, siteConfig.url).toString();
+  const base = siteConfig.url.endsWith("/") ? siteConfig.url : `${siteConfig.url}/`;
+  const route = path.endsWith(".xml") || path.endsWith(".txt") ? path : withTrailingSlash(path);
+  return new URL(route.replace(/^\//, ""), base).toString();
 }
 
 export function pageMetadata({
@@ -30,14 +38,18 @@ export function pageMetadata({
     title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
-      canonical: paths[locale],
-      languages: { es: paths.es, en: paths.en, "x-default": paths.es },
+      canonical: withTrailingSlash(paths[locale]),
+      languages: {
+        es: withTrailingSlash(paths.es),
+        en: withTrailingSlash(paths.en),
+        "x-default": withTrailingSlash(paths.es),
+      },
     },
     openGraph: {
       type: "website",
       locale: ogLocale[locale],
       alternateLocale: ogLocale[locale === "es" ? "en" : "es"],
-      url: paths[locale],
+      url: withTrailingSlash(paths[locale]),
       siteName: siteConfig.name,
       title,
       description,
@@ -54,7 +66,7 @@ export function pageMetadata({
 export function rootMetadata(locale: Locale): Metadata {
   const title = `${siteConfig.name} | ${siteConfig.role[locale]}`;
   return {
-    metadataBase: new URL(siteConfig.url),
+    metadataBase: new URL(siteConfig.url.endsWith("/") ? siteConfig.url : `${siteConfig.url}/`),
     title: { default: title, template: `%s | ${siteConfig.name}` },
     description: siteConfig.description[locale],
     applicationName: siteConfig.name,

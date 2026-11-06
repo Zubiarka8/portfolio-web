@@ -1,4 +1,3 @@
-import { cacheLife } from "next/cache";
 import { ArrowUp, ArrowUpRight, Mail, UserRound } from "lucide-react";
 import { GitHubIcon, type IconComponent } from "@/components/ui/BrandIcons";
 import { AccentDot } from "@/components/ui/AccentDot";
@@ -29,11 +28,8 @@ function displayUrl(href: string): string {
   return `${url.host}${url.pathname}`.replace(/\/$/, "");
 }
 
-async function CurrentYear() {
-  "use cache";
-  cacheLife("days");
-  return <>{new Date().getFullYear()}</>;
-}
+/** Evaluated at build time: the site is a static export, rebuilt on every deploy. */
+const currentYear = new Date().getFullYear();
 
 export function Footer({ locale, dict, onHome }: FooterProps) {
   const email = isValidEmail(siteConfig.contact.email) ? siteConfig.contact.email.trim() : "";
@@ -145,7 +141,7 @@ export function Footer({ locale, dict, onHome }: FooterProps) {
 
         <div className="flex flex-col-reverse gap-4 border-t border-line-soft pt-6 font-mono text-xs text-fg-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © <CurrentYear /> {siteConfig.name}. {dict.rights}
+            © {currentYear} {siteConfig.name}. {dict.rights}
           </p>
           <a
             href={topHref}
