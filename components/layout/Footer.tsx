@@ -1,6 +1,7 @@
 import { ArrowUp, ArrowUpRight, Mail, UserRound } from "lucide-react";
 import { GitHubIcon, type IconComponent } from "@/components/ui/BrandIcons";
 import { AccentDot } from "@/components/ui/AccentDot";
+import { pageHref } from "@/lib/base-path";
 import { navItems, routes, sectionIds } from "@/data/navigation";
 import { isConfiguredUrl, isValidEmail, siteConfig } from "@/data/site-config";
 import type { Dictionary } from "@/data/dictionary";
@@ -71,7 +72,7 @@ export function Footer({ locale, dict, onHome }: FooterProps) {
               {navItems.map((item) => (
                 <li key={item.key}>
                   <a
-                    href={routes.section(locale, item.key, onHome)}
+                    href={pageHref(routes.section(locale, item.key, onHome))}
                     className="inline-flex min-h-10 items-center text-fg-secondary transition-colors duration-200 hover:text-fg"
                   >
                     {item.label[locale]}

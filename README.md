@@ -1,6 +1,6 @@
 # Arkaitz Zubizarreta — Portfolio
 
-Personal portfolio for Arkaitz Zubizarreta, UI/UX & Product Designer. One-page home with project case studies, in Spanish (`/`) and English (`/en`).
+Personal portfolio for Arkaitz Zubizarreta, UI/UX & Product Designer. One-page home with project case studies, in Spanish (`/es`) and English (`/en`).
 
 ## Requirements
 
@@ -34,7 +34,7 @@ Next.js 16 (App Router, static export), React 19, TypeScript (strict), Tailwind 
 
 ```text
 app/
-  (es)/                     Spanish root layout: /, /proyectos/[slug], /es, /es/proyectos/[slug]
+  (es)/                     Spanish root layout: /es, /es/proyectos/[slug] (plus / and /proyectos/[slug], which redirect by language)
   (en)/                     English root layout: /en, /en/projects/[slug]
   global-not-found.tsx      404 for unmatched URLs
   sitemap.ts, robots.ts, icon.svg
@@ -98,7 +98,7 @@ Empty URLs are never rendered as links. They appear as disabled buttons that say
 
 ## Deployment (GitHub Pages)
 
-The site is a static export (`output: "export"`), so it needs no server. There is no `proxy.ts`: the first-visit language choice runs in the browser (`lib/locale-redirect.ts`), and `/es` is a real page whose canonical URL is `/`.
+The site is a static export (`output: "export"`), so it needs no server. There is no `proxy.ts`: the first-visit language choice runs in the browser (`lib/locale-redirect.ts`), and `/es` is the canonical Spanish URL; `/` only redirects by language.
 
 1. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**. GitHub Pages on a private repository needs a paid plan; a public repository works on the free plan.
 2. Push to `main` (or `nextjs`). `.github/workflows/deploy.yml` builds and publishes `out/`.

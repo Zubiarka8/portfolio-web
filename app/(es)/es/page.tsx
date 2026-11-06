@@ -1,3 +1,3 @@
-// /es mirrors /en. Static hosting cannot rewrite, so this is a real page that
-// renders the Spanish home; its canonical URL stays "/" (see the re-exported metadata).
+// /es is the canonical Spanish URL. The root "/" renders the same page for
+// visitors who arrive without a language choice; both declare /es/ as canonical.
 export { default, metadata } from "../page";

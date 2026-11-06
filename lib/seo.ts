@@ -83,7 +83,7 @@ export function personJsonLd(locale: Locale) {
     "@type": "Person",
     name: siteConfig.name,
     jobTitle: siteConfig.role[locale],
-    url: absoluteUrl(locale === "es" ? "/" : "/en"),
+    url: absoluteUrl(locale === "es" ? "/es" : "/en"),
     ...(isValidEmail(siteConfig.contact.email) ? { email: `mailto:${siteConfig.contact.email}` } : {}),
     ...(sameAs.length > 0 ? { sameAs } : {}),
   };

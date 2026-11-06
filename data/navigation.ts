@@ -58,11 +58,11 @@ export const navOwner: Record<SectionKey, SectionKey> = {
 };
 
 export const routes = {
-  home: (locale: Locale) => (locale === "es" ? "/" : "/en"),
+  home: (locale: Locale) => (locale === "es" ? "/es" : "/en"),
   project: (locale: Locale, slug: string) =>
-    locale === "es" ? `/proyectos/${slug}` : `/en/projects/${slug}`,
+    locale === "es" ? `/es/proyectos/${slug}` : `/en/projects/${slug}`,
   section: (locale: Locale, key: SectionKey, fromHome: boolean) => {
     const hash = `#${sectionIds[locale][key]}`;
-    return fromHome ? hash : `${routes.home(locale)}${hash}`;
+    return fromHome ? hash : `${routes.home(locale)}/${hash}`;
   },
 };

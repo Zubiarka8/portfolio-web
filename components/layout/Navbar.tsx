@@ -125,7 +125,7 @@ export function Navbar({ locale, dict, onHome, alternateHref }: NavbarProps) {
             return (
               <li key={item.key} className="relative">
                 <a
-                  href={hrefFor(item.key)}
+                  href={pageHref(hrefFor(item.key))}
                   aria-current={isActive ? "true" : undefined}
                   className={`relative z-10 flex h-9 items-center gap-2 rounded-full px-3.5 font-mono text-[0.78rem] transition-colors duration-200 ${
                     isActive ? "text-fg" : "text-fg-secondary hover:text-fg"
@@ -198,7 +198,7 @@ export function Navbar({ locale, dict, onHome, alternateHref }: NavbarProps) {
                 return (
                   <li key={item.key} className="border-b border-line-soft last:border-b-0">
                     <a
-                      href={hrefFor(item.key)}
+                      href={pageHref(hrefFor(item.key))}
                       aria-current={isActive ? "true" : undefined}
                       onClick={() => setOpen(false)}
                       className="flex min-h-14 items-center justify-between font-dot text-2xl font-bold text-fg"
