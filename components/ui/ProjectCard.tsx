@@ -52,6 +52,11 @@ export function ProjectCard({ project, index, locale, dict }: ProjectCardProps) 
             {dict.demo}
           </span>
         ) : null}
+        {project.status === "in-development" ? (
+          <span className="absolute right-3 top-3 rounded-sm border border-accent/50 bg-background/80 px-2 py-1 font-mono text-[11px] text-accent backdrop-blur-sm">
+            {dict.inDevelopment}
+          </span>
+        ) : null}
       </Link>
 
       <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
@@ -70,16 +75,18 @@ export function ProjectCard({ project, index, locale, dict }: ProjectCardProps) 
           </p>
         </div>
 
-        <ul aria-label={dict.technologies} className="flex flex-wrap gap-1.5">
-          {project.technologies.map((tech) => (
-            <li
-              key={tech}
-              className="rounded-sm border border-line-soft px-2 py-1 font-mono text-[11px] text-fg-secondary"
-            >
-              {tech}
-            </li>
-          ))}
-        </ul>
+        {project.technologies.length > 0 ? (
+          <ul aria-label={dict.technologies} className="flex flex-wrap gap-1.5">
+            {project.technologies.map((tech) => (
+              <li
+                key={tech}
+                className="rounded-sm border border-line-soft px-2 py-1 font-mono text-[11px] text-fg-secondary"
+              >
+                {tech}
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="mt-auto flex flex-wrap items-center gap-2 pt-2">
           <ButtonLink

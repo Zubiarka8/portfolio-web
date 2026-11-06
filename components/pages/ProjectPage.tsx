@@ -127,6 +127,13 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
           </p>
         ) : null}
 
+        {project.status === "in-development" ? (
+          <p className="mt-8 flex items-start gap-2 rounded-sm border border-line-soft bg-surface px-4 py-3 font-mono text-xs leading-relaxed text-fg-secondary">
+            <Info aria-hidden="true" className="mt-0.5 size-3.5 shrink-0 text-accent" />
+            {t.inDevelopmentNotice}
+          </p>
+        ) : null}
+
         <figure className="crop-marks relative mt-10 aspect-video overflow-hidden rounded-sm border border-line-soft bg-surface">
           <Image
             src={withBasePath(project.cover.src)}
@@ -235,7 +242,9 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
               {[
                 { label: t.technologies, items: project.technologies },
                 { label: t.tools, items: project.tools },
-              ].map((group) => (
+              ]
+                .filter((group) => group.items.length > 0)
+                .map((group) => (
                 <div key={group.label} className="flex flex-col gap-3">
                   <dt className="text-sm text-fg-secondary">{group.label}</dt>
                   <dd>
@@ -255,6 +264,7 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
             </dl>
           </Block>
 
+          {study.learnings[locale].length > 0 ? (
           <Block label={t.learnings}>
             <ul className="flex max-w-[62ch] flex-col gap-4">
               {study.learnings[locale].map((learning) => (
@@ -271,6 +281,7 @@ export function ProjectPage({ project, locale }: ProjectPageProps) {
               ))}
             </ul>
           </Block>
+          ) : null}
 
           {website || repository ? (
             <Block label={t.links}>

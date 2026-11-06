@@ -32,6 +32,8 @@ export interface Project {
   };
   /** Marks illustrative projects so they are never presented as real work. */
   isDemo: boolean;
+  /** "in-development": no published result yet; the page describes the plan. */
+  status: "released" | "in-development";
   caseStudy: {
     context: Localized;
     objective: Localized;
@@ -73,6 +75,7 @@ export const projects: Project[] = [
       repository: "https://github.com/Zubiarka8/mini-consumes-tokens",
     },
     isDemo: false,
+    status: "released",
     caseStudy: {
       context: {
         es: "Proyecto de código abierto (licencia Apache-2.0) para quien programa con asistentes de IA. Funciona en local: el índice es un único archivo en tu equipo y nada sale de él.",
@@ -123,6 +126,67 @@ export const projects: Project[] = [
           "Building on an open protocol such as MCP avoids tying the tool to a single editor or assistant.",
         ],
       },
+    },
+  },
+  {
+    slug: "zirrara-glass",
+    name: "zirrara-glass",
+    category: { es: "Biblioteca de interfaz (UI)", en: "UI library" },
+    summary: {
+      es: "Una UI para crear interfaces en páginas web, pensada para ampliarse después a Android, iOS y escritorio.",
+      en: "A UI to build interfaces for web pages, designed to grow later into Android, iOS and desktop.",
+    },
+    technologies: [],
+    tools: ["GitHub"],
+    accent: "#6AD4FF",
+    cover: {
+      src: "/images/projects/zirrara-glass.svg",
+      alt: {
+        es: "Ilustración de componentes de interfaz translúcidos: botones, un campo de búsqueda, interruptores, un control deslizante y una tarjeta, con etiquetas web, android, iOS y escritorio.",
+        en: "Illustration of translucent interface components: buttons, a search field, toggles, a slider and a card, with web, android, iOS and desktop labels.",
+      },
+      ...coverSize,
+    },
+    links: {
+      website: "",
+      repository: "https://github.com/Zubiarka8/zirrara-glass",
+    },
+    isDemo: false,
+    status: "in-development",
+    caseStudy: {
+      context: {
+        es: "Proyecto personal que acaba de empezar. El repositorio es público pero todavía no tiene código: esta página recoge la idea, no un resultado.",
+        en: "A personal project that has just started. The repository is public but has no code yet: this page describes the idea, not a result.",
+      },
+      objective: {
+        es: "Ofrecer una UI con la que crear interfaces para páginas web de forma coherente, sin rehacer cada componente en cada proyecto.",
+        en: "Provide a UI for building web page interfaces consistently, without rebuilding every component in each project.",
+      },
+      problem: {
+        es: "Cada web nueva suele empezar recreando los mismos botones, campos y tarjetas, y mantener su aspecto igual entre proyectos cuesta tiempo.",
+        en: "Every new site tends to start by recreating the same buttons, fields and cards, and keeping them looking the same across projects takes time.",
+      },
+      process: [
+        {
+          title: { es: "Primero la web", en: "Web first" },
+          body: {
+            es: "El punto de partida son los componentes para interfaces de páginas web.",
+            en: "The starting point is components for web page interfaces.",
+          },
+        },
+        {
+          title: { es: "Después, otras plataformas", en: "Other platforms later" },
+          body: {
+            es: "Si el diseño lo permite, la idea es llevarlo también a Android, iOS y escritorio. Es una posibilidad, no un compromiso.",
+            en: "If the design allows it, the idea is to bring it to Android, iOS and desktop as well. It is a possibility, not a commitment.",
+          },
+        },
+      ],
+      solution: {
+        es: "Todavía por definir: tecnologías, componentes y documentación se decidirán al empezar el desarrollo y se reflejarán aquí.",
+        en: "Still to be defined: technologies, components and documentation will be decided as development starts and reflected here.",
+      },
+      learnings: { es: [], en: [] },
     },
   },
 ];

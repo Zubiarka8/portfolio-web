@@ -33,6 +33,7 @@ const es = {
     category: "Categoría",
     technologies: "Tecnologías",
     demo: "Demo",
+    inDevelopment: "En desarrollo",
   },
   skills: {
     title: "Skills técnicas",
@@ -72,6 +73,8 @@ const es = {
     back: "Todos los proyectos",
     demoNotice:
       "Proyecto de demostración. El contenido es ilustrativo y no corresponde a un trabajo real.",
+    inDevelopmentNotice:
+      "Proyecto en desarrollo: todavía no hay resultado publicado y esta página describe el plan.",
     context: "Contexto",
     objective: "Objetivo",
     problem: "Problema a resolver",
@@ -128,6 +131,7 @@ const en: Dictionary = {
     category: "Category",
     technologies: "Technologies",
     demo: "Demo",
+    inDevelopment: "In development",
   },
   skills: {
     title: "Technical skills",
@@ -167,6 +171,8 @@ const en: Dictionary = {
     back: "All projects",
     demoNotice:
       "Demonstration project. The content is illustrative and does not describe real work.",
+    inDevelopmentNotice:
+      "Project in development: there is no published result yet and this page describes the plan.",
     context: "Context",
     objective: "Objective",
     problem: "Problem to solve",
