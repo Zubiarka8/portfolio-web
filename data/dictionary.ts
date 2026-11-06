@@ -47,12 +47,12 @@ const es = {
   abilities: {
     title: "Habilidades profesionales",
     intro:
-      "Lo que no aparece en un archivo de Figma pero decide la calidad del resultado. Selecciona una para ver con qué se conecta.",
+      "Lo que no aparece en el código pero decide la calidad del resultado. Selecciona una para ver con qué se conecta.",
     connects: "Se conecta con",
     listLabel: "Lista de habilidades",
   },
   about: {
-    philosophy: "Filosofía de diseño",
+    philosophy: "Cómo trabajo",
     interests: "Intereses profesionales",
   },
   process: {
@@ -78,7 +78,7 @@ const es = {
     context: "Contexto",
     objective: "Objetivo",
     problem: "Problema a resolver",
-    process: "Proceso de diseño",
+    process: "Proceso",
     solution: "Solución propuesta",
     gallery: "Galería",
     galleryOverview: "Vista general",
@@ -145,12 +145,12 @@ const en: Dictionary = {
   abilities: {
     title: "Professional abilities",
     intro:
-      "What never shows up in a Figma file but decides the quality of the result. Select one to see what it connects with.",
+      "What never shows up in the code but decides the quality of the result. Select one to see what it connects with.",
     connects: "Connects with",
     listLabel: "List of abilities",
   },
   about: {
-    philosophy: "Design philosophy",
+    philosophy: "How I work",
     interests: "Professional interests",
   },
   process: {
@@ -176,7 +176,7 @@ const en: Dictionary = {
     context: "Context",
     objective: "Objective",
     problem: "Problem to solve",
-    process: "Design process",
+    process: "Process",
     solution: "Proposed solution",
     gallery: "Gallery",
     galleryOverview: "Overview",

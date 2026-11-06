@@ -1,6 +1,6 @@
 # Arkaitz Zubizarreta — Portfolio
 
-Personal portfolio for Arkaitz Zubizarreta, UI/UX & Product Designer. One-page home with project case studies, in Spanish (`/es`) and English (`/en`).
+Personal portfolio for Arkaitz Zubizarreta, Full Stack Developer. One-page home with project case studies, in Spanish (`/es`) and English (`/en`).
 
 ## Requirements
 

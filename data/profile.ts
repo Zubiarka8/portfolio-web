@@ -25,10 +25,10 @@ export interface Ability {
 export const abilities: Ability[] = [
   {
     id: "user-centred",
-    name: { es: "Diseño centrado en el usuario", en: "User-centred design" },
+    name: { es: "Pensar en quien lo usa", en: "Thinking about the user" },
     description: {
-      es: "Cada decisión parte de quién va a usar el producto y de lo que necesita conseguir.",
-      en: "Every decision starts with who will use the product and what they need to achieve.",
+      es: "Cada decisión técnica parte de quién va a usar el producto y de lo que necesita conseguir.",
+      en: "Every technical decision starts with who will use the product and what they need to achieve.",
     },
     related: ["research", "problem-solving", "detail"],
   },
@@ -36,17 +36,17 @@ export const abilities: Ability[] = [
     id: "problem-solving",
     name: { es: "Resolución de problemas", en: "Problem solving" },
     description: {
-      es: "Separar el síntoma de la causa antes de proponer una pantalla.",
-      en: "Separating the symptom from the cause before proposing a screen.",
+      es: "Separar el síntoma de la causa antes de escribir código.",
+      en: "Separating the symptom from the cause before writing code.",
     },
     related: ["strategy", "creativity"],
   },
   {
     id: "strategy",
-    name: { es: "Pensamiento estratégico", en: "Strategic thinking" },
+    name: { es: "Visión de producto", en: "Product thinking" },
     description: {
-      es: "Conectar cada interfaz con los objetivos del producto y del negocio.",
-      en: "Connecting every interface with product and business goals.",
+      es: "Conectar cada funcionalidad con los objetivos del producto y del negocio.",
+      en: "Connecting every feature with product and business goals.",
     },
     related: ["communication", "research"],
   },
@@ -54,8 +54,8 @@ export const abilities: Ability[] = [
     id: "creativity",
     name: { es: "Creatividad", en: "Creativity" },
     description: {
-      es: "Explorar varias direcciones antes de quedarse con la primera idea válida.",
-      en: "Exploring several directions before settling on the first valid idea.",
+      es: "Explorar varias soluciones antes de quedarse con la primera que funciona.",
+      en: "Exploring several solutions before settling on the first one that works.",
     },
     related: ["detail", "collaboration"],
   },
@@ -63,8 +63,8 @@ export const abilities: Ability[] = [
     id: "communication",
     name: { es: "Comunicación", en: "Communication" },
     description: {
-      es: "Explicar el porqué de una decisión con la misma claridad que el qué.",
-      en: "Explaining the why of a decision as clearly as the what.",
+      es: "Explicar el porqué de una decisión técnica con la misma claridad que el qué.",
+      en: "Explaining the why of a technical decision as clearly as the what.",
     },
     related: ["collaboration"],
   },
@@ -72,8 +72,8 @@ export const abilities: Ability[] = [
     id: "research",
     name: { es: "Investigación", en: "Research" },
     description: {
-      es: "Preguntar, observar y contrastar antes de dar algo por supuesto.",
-      en: "Asking, observing and cross-checking before taking anything for granted.",
+      es: "Leer la documentación, probar y contrastar antes de dar algo por supuesto.",
+      en: "Reading the docs, testing and cross-checking before taking anything for granted.",
     },
     related: ["problem-solving"],
   },
@@ -81,8 +81,8 @@ export const abilities: Ability[] = [
     id: "collaboration",
     name: { es: "Trabajo colaborativo", en: "Collaboration" },
     description: {
-      es: "Diseñar con desarrollo, producto y negocio en la misma conversación.",
-      en: "Designing with engineering, product and business in the same conversation.",
+      es: "Trabajar con diseño, producto y negocio en la misma conversación.",
+      en: "Working with design, product and business in the same conversation.",
     },
     related: ["user-centred"],
   },
@@ -90,8 +90,8 @@ export const abilities: Ability[] = [
     id: "detail",
     name: { es: "Atención al detalle", en: "Attention to detail" },
     description: {
-      es: "Los estados, los textos y los márgenes también son parte de la experiencia.",
-      en: "States, copy and spacing are part of the experience too.",
+      es: "Los errores, los estados vacíos y los textos también son parte del producto.",
+      en: "Errors, empty states and copy are part of the product too.",
     },
     related: ["communication"],
   },
@@ -111,50 +111,50 @@ export interface ProcessStage {
 export const processStages: ProcessStage[] = [
   {
     number: "01",
-    title: { es: "Descubrir", en: "Discover" },
+    title: { es: "Entender", en: "Understand" },
     description: {
-      es: "Investigar usuarios, necesidades y contexto.",
-      en: "Research users, needs and context.",
+      es: "Aclarar qué problema hay que resolver y para quién.",
+      en: "Clarify which problem needs solving and for whom.",
     },
     activities: {
-      es: ["Entrevistas", "Análisis del contexto", "Revisión de lo existente"],
-      en: ["Interviews", "Context analysis", "Review of what exists"],
+      es: ["Requisitos", "Revisión de lo existente", "Preguntas abiertas"],
+      en: ["Requirements", "Review of what exists", "Open questions"],
     },
   },
   {
     number: "02",
-    title: { es: "Definir", en: "Define" },
+    title: { es: "Planificar", en: "Plan" },
     description: {
-      es: "Identificar problemas, oportunidades y objetivos.",
-      en: "Identify problems, opportunities and goals.",
+      es: "Dividir el trabajo en tareas pequeñas y decidir la arquitectura.",
+      en: "Split the work into small tasks and decide the architecture.",
     },
     activities: {
-      es: ["Mapas de recorrido", "Priorización", "Criterios de éxito"],
-      en: ["Journey maps", "Prioritisation", "Success criteria"],
+      es: ["Modelo de datos", "Priorización", "Criterios de éxito"],
+      en: ["Data model", "Prioritisation", "Success criteria"],
     },
   },
   {
     number: "03",
-    title: { es: "Diseñar", en: "Design" },
+    title: { es: "Construir", en: "Build" },
     description: {
-      es: "Explorar ideas, construir interfaces y prototipos.",
-      en: "Explore ideas, build interfaces and prototypes.",
+      es: "Programar el frontend y el backend en ciclos cortos.",
+      en: "Code the frontend and the backend in short cycles.",
     },
     activities: {
-      es: ["Wireframes", "Interfaz visual", "Prototipos interactivos"],
-      en: ["Wireframes", "Visual interface", "Interactive prototypes"],
+      es: ["Frontend", "API y backend", "Control de versiones"],
+      en: ["Frontend", "API and backend", "Version control"],
     },
   },
   {
     number: "04",
-    title: { es: "Validar", en: "Validate" },
+    title: { es: "Probar y publicar", en: "Test and ship" },
     description: {
-      es: "Probar soluciones, recoger feedback e iterar.",
-      en: "Test solutions, gather feedback and iterate.",
+      es: "Probar lo construido, publicarlo y mejorarlo con lo aprendido.",
+      en: "Test what was built, ship it and improve it with what was learned.",
     },
     activities: {
-      es: ["Tests con usuarios", "Revisión de accesibilidad", "Iteración"],
-      en: ["User testing", "Accessibility review", "Iteration"],
+      es: ["Pruebas", "Revisión de código", "Despliegue"],
+      en: ["Testing", "Code review", "Deployment"],
     },
   },
 ];
@@ -177,18 +177,18 @@ export interface AboutContent {
 
 /** Provisional copy: replace freely. */
 export const about: AboutContent = {
-  title: { es: "Más allá de la interfaz.", en: "Beyond the interface." },
+  title: { es: "Del frontend al backend.", en: "From frontend to backend." },
   intro: {
-    es: "Soy Arkaitz Zubizarreta, un profesional apasionado por el diseño de productos digitales y la creación de experiencias que combinan claridad, funcionalidad y personalidad. Me interesa comprender los problemas, explorar soluciones y transformar ideas en experiencias útiles.",
-    en: "I'm Arkaitz Zubizarreta, a professional passionate about digital product design and about creating experiences that combine clarity, functionality and personality. I care about understanding problems, exploring solutions and turning ideas into useful experiences.",
+    es: "Soy Arkaitz Zubizarreta, desarrollador full stack. Construyo aplicaciones web con JavaScript, PHP, Python, Django y FastAPI. Antes de escribir código me intereso por entender el problema, para que el resultado sea útil.",
+    en: "I'm Arkaitz Zubizarreta, a full stack developer. I build web applications with JavaScript, PHP, Python, Django and FastAPI. Before writing code I make sure I understand the problem, so the result is useful.",
   },
   philosophy: {
-    es: "Una buena interfaz no se nota: deja que la persona haga lo que ha venido a hacer. Busco ese equilibrio entre orden, criterio visual y detalles que hacen que un producto se sienta propio.",
-    en: "A good interface goes unnoticed: it lets people do what they came to do. I look for the balance between order, visual judgement and the details that make a product feel like its own.",
+    es: "Un buen producto funciona sin que nadie piense en cómo está hecho. Busco código claro, que otra persona pueda leer y mantener, y una interfaz cuidada en los detalles.",
+    en: "A good product works without anyone thinking about how it is built. I aim for clear code that someone else can read and maintain, and an interface that is polished down to the details.",
   },
   interests: {
-    es: ["Sistemas de diseño", "Interfaces de datos", "Prototipado con código", "Accesibilidad", "Arte digital y motion"],
-    en: ["Design systems", "Data interfaces", "Prototyping in code", "Accessibility", "Digital art and motion"],
+    es: ["APIs con FastAPI", "Aplicaciones con Django", "Herramientas para desarrolladores", "Accesibilidad", "Arte digital y motion"],
+    en: ["APIs with FastAPI", "Django applications", "Developer tools", "Accessibility", "Digital art and motion"],
   },
   photo: {
     src: "",
