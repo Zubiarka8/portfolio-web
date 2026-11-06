@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="ui-monospace, Menlo, monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b1204"/>
+      <stop offset="0.55" stop-color="#0d0d10"/>
+      <stop offset="1" stop-color="#101620"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#d7ff3f" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#d7ff3f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <g transform="translate(100 80)">
+    <rect width="1400" height="740" rx="24" fill="#111017" stroke="#2a2d36" stroke-width="2"/>
+    <!-- Top bar -->
+    <circle cx="44" cy="44" r="10" fill="#d7ff3f"/>
+    <text x="74" y="50" fill="#f5f5f7" font-size="18" font-weight="700">mini-consumes-tokens</text>
+    <text x="1356" y="50" fill="#a4a4b2" font-size="14" text-anchor="end">code → map → answer</text>
+    <path d="M0 88H1400" stroke="#2a2d36"/>
+
+    <!-- Left: source files read line by line -->
+    <g transform="translate(48 140)">
+      <rect width="360" height="520" rx="14" fill="#0d0d13" stroke="#2a2d36"/>
+      <text x="24" y="40" fill="#a4a4b2" font-size="14">invoice.js</text>
+      <g fill="#a4a4b2" fill-opacity="0.45">
+        <rect x="24" y="68" width="220" height="8" rx="4"/>
+        <rect x="24" y="92" width="150" height="8" rx="4"/>
+        <rect x="24" y="116" width="260" height="8" rx="4"/>
+        <rect x="24" y="140" width="190" height="8" rx="4"/>
+        <rect x="24" y="164" width="240" height="8" rx="4"/>
+        <rect x="24" y="188" width="120" height="8" rx="4"/>
+        <rect x="24" y="212" width="280" height="8" rx="4"/>
+        <rect x="24" y="236" width="170" height="8" rx="4"/>
+        <rect x="24" y="260" width="230" height="8" rx="4"/>
+        <rect x="24" y="284" width="140" height="8" rx="4"/>
+        <rect x="24" y="308" width="250" height="8" rx="4"/>
+        <rect x="24" y="332" width="200" height="8" rx="4"/>
+        <rect x="24" y="356" width="270" height="8" rx="4"/>
+        <rect x="24" y="380" width="160" height="8" rx="4"/>
+        <rect x="24" y="404" width="220" height="8" rx="4"/>
+        <rect x="24" y="428" width="130" height="8" rx="4"/>
+        <rect x="24" y="452" width="260" height="8" rx="4"/>
+        <rect x="24" y="476" width="180" height="8" rx="4"/>
+      </g>
+      <!-- The few lines that matter -->
+      <rect x="24" y="188" width="120" height="8" rx="4" fill="#d7ff3f"/>
+      <rect x="24" y="212" width="280" height="8" rx="4" fill="#d7ff3f"/>
+      <rect x="24" y="236" width="170" height="8" rx="4" fill="#d7ff3f"/>
+    </g>
+
+    <!-- Center: the symbol graph -->
+    <g transform="translate(470 120)">
+      <circle cx="230" cy="280" r="260" fill="url(#glow)"/>
+      <g stroke="#d7ff3f" stroke-opacity="0.45" stroke-width="2" fill="none">
+        <path d="M230 280L90 130"/>
+        <path d="M230 280L380 110"/>
+        <path d="M230 280L60 360"/>
+        <path d="M230 280L400 400"/>
+        <path d="M230 280L230 470"/>
+        <path d="M90 130L380 110" stroke-opacity="0.2"/>
+        <path d="M60 360L230 470" stroke-opacity="0.2"/>
+        <path d="M400 400L230 470" stroke-opacity="0.2"/>
+      </g>
+      <g fill="#111017" stroke="#a4a4b2" stroke-opacity="0.7" stroke-width="2">
+        <circle cx="90" cy="130" r="16"/>
+        <circle cx="380" cy="110" r="16"/>
+        <circle cx="60" cy="360" r="16"/>
+        <circle cx="400" cy="400" r="16"/>
+        <circle cx="230" cy="470" r="16"/>
+      </g>
+      <circle cx="230" cy="280" r="34" fill="#d7ff3f"/>
+      <circle cx="230" cy="280" r="52" fill="none" stroke="#d7ff3f" stroke-opacity="0.5" stroke-width="2"/>
+      <text x="230" y="560" fill="#a4a4b2" font-size="14" text-anchor="middle">find_symbol · find_callers · impact_analysis</text>
+    </g>
+
+    <!-- Right: the short answer -->
+    <g transform="translate(992 140)">
+      <rect width="360" height="520" rx="14" fill="#0d0d13" stroke="#2a2d36"/>
+      <text x="24" y="40" fill="#a4a4b2" font-size="14">answer</text>
+      <text x="24" y="170" fill="#d7ff3f" font-size="88" font-weight="700">70–98%</text>
+      <text x="24" y="212" fill="#f5f5f7" font-size="22" font-weight="700">fewer tokens read</text>
+      <rect x="24" y="260" width="312" height="2" fill="#2a2d36"/>
+      <g fill="#a4a4b2" fill-opacity="0.45">
+        <rect x="24" y="300" width="200" height="8" rx="4"/>
+        <rect x="24" y="324" width="260" height="8" rx="4"/>
+      </g>
+      <rect x="24" y="348" width="140" height="8" rx="4" fill="#d7ff3f"/>
+      <g fill="#a4a4b2" fill-opacity="0.45">
+        <rect x="24" y="372" width="230" height="8" rx="4"/>
+      </g>
+      <text x="24" y="470" fill="#a4a4b2" font-size="14">local · MCP · 17 languages</text>
+    </g>
+
+    <!-- Flow arrows -->
+    <g stroke="#d7ff3f" stroke-opacity="0.6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M424 400H462M452 390l10 10-10 10"/>
+      <path d="M938 400H976M966 390l10 10-10 10"/>
+    </g>
+  </g>
+</svg>
